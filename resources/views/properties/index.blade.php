@@ -44,7 +44,7 @@ Property
 							<div class="card">
 								<div class="card-header border-0 flex-wrap">
 								   <h2 class="card-title">Property List</h2>
-                                   <a href="" class="btn btn-sm btn-primary">Add Property</a>
+                                   <a href="{{url('properties.create')}}" class="btn btn-sm btn-primary">Add Property</a>
 								</div>
                                 <hr style="border:1px solid #ccc;margin: 0 23px;">
 								<div class="card-body">
