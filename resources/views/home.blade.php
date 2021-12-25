@@ -8,6 +8,10 @@
 @include('dashboard_src.footer')
 @endsection 
 
+@section('page_name')
+Dashboard
+@endsection
+
 @section('nav-header')
 @include('dashboard_src.header')
 @endsection 
@@ -41,3 +45,4 @@
             Content body end
         ***********************************-->
 @endsection
+

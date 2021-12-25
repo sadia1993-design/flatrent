@@ -16,6 +16,10 @@
 </script>
 @endsection
 
+@section('page_name')
+Property
+@endsection
+
 @section('footer')
 @include('../dashboard_src/footer')
 @endsection
@@ -56,7 +60,7 @@
                                         <tbody>
                                             @forelse ($properties as $key => $property)
                                             <tr>
-                                                <td scope="row">{{$key+1}}</td>
+                                                <td >{{$key+1}}</td>
                                                 <td>{{$property->name}}</td>
                                                 <td>{{$property->address}}</td>
                                                 <td>
