@@ -12384,7 +12384,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
       left: 0; }
     .dlabnav .metismenu > li {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column; margin-bottom: 12px; }
       .dlabnav .metismenu > li a > i {
         font-size: 1.3rem;
         display: inline-block;
