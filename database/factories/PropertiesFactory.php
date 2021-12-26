@@ -18,7 +18,7 @@ class PropertiesFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
-            'address' => $this->faker->text
+            'address' => $this->faker->address
         ];
     }
 }
