@@ -2,7 +2,6 @@
 
 @section('script')
 @include('../dashboard_src/scripts')
-<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
 <script>
     $('#editor').ckeditor();
 </script>
@@ -39,16 +38,19 @@ Property
 								</div>
                                 <hr style="border:1px solid #ccc;margin: 0 23px;">
 								<div class="card-body">
+                                    
 									<form action="" method="post">
-                                        <div class="form-group">
+                                    @csrf
+                                        <div class="form-group mb-5">
 
-                                            <label for="property_name">Property Name</label>
+                                            <label for="property_name" style="font-weight: bold">Property Name</label>
                                             <input type="text" class="form-control" id="property_name" name="property_name" value="{{$postSingle->name}}">
+                                            <input type="hidden" class="form-control" id="property_id" name="property_id" value="{{$postSingle->id}}">
 
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group mb-5">
 
-                                            <label for="editor">Property Address</label>
+                                            <label for="editor" style="font-weight: bold">Property Address</label>
                                             <textarea id="editor" name="property_addr" >{{$postSingle->address}}</textarea>
 
                                         </div>
