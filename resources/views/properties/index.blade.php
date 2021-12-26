@@ -65,8 +65,13 @@ Property
                                                 <td>{{$property->address}}</td>
                                                 <td>
                                                     <a href="{{route('properties.show', $property->id)}}" class="btn btn-sm btn-primary">Edit</a>
-                                                    
-                                                    <a href="{{route('properties.destroy', $property->id)}}" onclick="return confirm('Are You Sure?')" class="btn btn-sm btn-danger">Delete</a>
+
+                                                    <form action="{{route('properties.destroy', $property->id)}}" method="POST" style="display: inline-block;">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                    </form>
+
                                                 </td>
                                             </tr>
                                             @empty
