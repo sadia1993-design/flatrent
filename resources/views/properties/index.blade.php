@@ -62,16 +62,17 @@ Property
                                             <tr>
                                                 <td >{{$key+1}}</td>
                                                 <td>{{$property->name}}</td>
-                                                <td>{{$property->address}}</td>
+                                                <td>{{ Illuminate\Support\Str::limit($property->address, 50)}}</td>
                                                 <td>
-                                                    <a href="{{route('properties.show', $property->id)}}" class="btn btn-sm btn-primary">Edit</a>
+                                                    <a href="{{route('properties.show', $property->id)}}" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
 
                                                     <form action="{{route('properties.destroy', $property->id)}}" method="POST" style="display: inline-block;">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are You Sure?')">Delete</button>
+                                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are You Sure?')"><i class="fas fa-trash-alt"></i></button>
                                                     </form>
 
+                                                    
                                                 </td>
                                             </tr>
                                             @empty

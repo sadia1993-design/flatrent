@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ExpenseCategories\Properties;
+use App\Models\Properties;
 
 class PropertyController extends Controller
 {
@@ -79,8 +79,7 @@ class PropertyController extends Controller
      */
     public function destroy($id)
     {
-        $deleteSingle = Properties::find($id);
-        $deleteSingle->delete();
+        Properties::destroy($id);
         return redirect('/properties')->with('success', 'Property Deleted');
     }
 }
