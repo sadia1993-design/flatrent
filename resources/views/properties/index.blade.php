@@ -69,7 +69,7 @@ Property
                                                     <form action="{{route('properties.destroy', $property->id)}}" method="POST" style="display: inline-block;">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are You Sure?')">Delete</button>
                                                     </form>
 
                                                 </td>
