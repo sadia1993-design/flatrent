@@ -44,7 +44,8 @@ class PropertyController extends Controller
      */
     public function show($id)
     {
-        //
+        $postSingle = Properties::find($id);
+        return view('properties.show')->with('postSingle', $postSingle);
     }
 
     /**

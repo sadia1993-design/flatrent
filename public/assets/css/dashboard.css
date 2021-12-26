@@ -34116,7 +34116,7 @@ table.dataTable tbody tr, table.dataTable tbody td {
 }
 
 table.dataTable thead th {
-    color: #f7f7f7;
+    color: #000;
     white-space: nowrap;
     font-size: 16px;
     text-transform: capitalize;

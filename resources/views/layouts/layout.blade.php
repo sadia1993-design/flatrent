@@ -25,7 +25,9 @@
   <link href="{{asset('assets/vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
 
   <!-- Style css -->
-  <link href="{{asset('assets/css/dashboard.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/css/dashboard.css')}}" rel="stylesheet">  
+
+  
 
 </head>
 
