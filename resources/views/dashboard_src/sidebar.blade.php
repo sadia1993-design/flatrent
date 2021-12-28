@@ -19,7 +19,7 @@
                     </li>
 
                     <li>
-                        <a  href="" >
+                        <a  href="{{url('flats')}}" >
 							<i class="fas fa-building"></i>
 							<span class="nav-text">Flat</span>
 						</a>

@@ -21,4 +21,6 @@ class Flats extends Model
     {
         return $this->hasMany(Rents::class);
     }
+
+    
 }
