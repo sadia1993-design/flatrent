@@ -56,7 +56,7 @@ Flats
                                             @forelse ($flat_list as $key => $flat)
                                             <tr>
                                                 <td >{{$key+1}}</td>
-                                                <td>{{$flat->property_name}}</td>
+                                                <td>{{$flat->property->name}}</td>
                                                 <td>{{ $flat->flat_no }}</td>
                                                 <td>{{ $flat->size }}</td>
                                                 <td>{{ Illuminate\Support\Str::limit($flat->details, 50) }}</td>

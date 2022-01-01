@@ -9,6 +9,7 @@ class Flats extends Model
 {
     use HasFactory;
     protected $fillable = ['property_id', 'flat_no', 'size', 'details'];
+
     public function property()
     {
         return $this->belongsTo(Properties::class);
@@ -21,6 +22,4 @@ class Flats extends Model
     {
         return $this->hasMany(Rents::class);
     }
-
-    
 }

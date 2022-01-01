@@ -14,3 +14,4 @@ Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])-
 
 Route::resource('properties', App\Http\Controllers\PropertyController::class);
 Route::resource('flats', App\Http\Controllers\FlatController::class);
+Route::resource('tenants', App\Http\Controllers\TenantController::class);

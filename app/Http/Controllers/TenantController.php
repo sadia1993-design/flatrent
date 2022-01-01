@@ -2,24 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tenants;
 use Illuminate\Http\Request;
-use App\Models\Properties;
 
-class PropertyController extends Controller
+class TenantController extends Controller
 {
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        $properties = Properties::with('flats')
-            ->get();
-        // foreach ($properties as $property) {
-        //     print "<pre>";
-        //     print_r($property->flats);
-        //     print "</pre>";
-        // }
-        // return;
-
-        return view('properties.index')->with('properties', $properties);
+        $tenants = Tenants::all();
+        return view('tenants.index', compact('tenants'));
     }
 
     /**
@@ -29,7 +25,7 @@ class PropertyController extends Controller
      */
     public function create()
     {
-        return view('properties.create');
+        //
     }
 
     /**
@@ -51,8 +47,7 @@ class PropertyController extends Controller
      */
     public function show($id)
     {
-        $postSingle = Properties::find($id);
-        return view('properties.show')->with('postSingle', $postSingle);
+        //
     }
 
     /**
@@ -86,7 +81,6 @@ class PropertyController extends Controller
      */
     public function destroy($id)
     {
-        Properties::destroy($id);
-        return redirect('/properties')->with('success', 'Property Deleted');
+        //
     }
 }

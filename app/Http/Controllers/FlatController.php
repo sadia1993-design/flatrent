@@ -15,8 +15,11 @@ class FlatController extends Controller
      */
     public function index()
     {
-        $flat_list = DB::table('flats')->join('properties', 'flats.property_id', '=', 'properties.id')->select('flats.*', 'properties.name as property_name')->get();
-        return view('flats.index', ['flat_list' => $flat_list]);
+
+        // $flat_list = DB::table('flats')->join('properties', 'flats.property_id', '=', 'properties.id')->select('flats.*', 'properties.name as property_name')->get();
+        $flat_list = Flats::with('property')
+            ->get();
+        return view('flats.index', compact('flat_list'));
     }
 
     /**

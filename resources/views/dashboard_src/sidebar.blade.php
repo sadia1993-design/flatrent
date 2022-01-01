@@ -26,7 +26,7 @@
                     </li>
 
                     <li>
-                        <a  href="" >
+                        <a  href="{{url('tenants')}}" >
 							<i class="fas fa-users"></i>
 							<span class="nav-text">Tenants</span>
 						</a>
@@ -34,7 +34,7 @@
 
                     <li>
                         <a  href="" >
-							<i class="fas fa-payment"></i>
+							<img style="width: 26px;margin-right:10px" src="{{asset('assets/images/house.png')}}" alt="">
 							<span class="nav-text">Rent</span>
 						</a>
                     </li>
@@ -51,7 +51,7 @@
                     </li> --}}
                 </ul>
 
-				
+
 			</div>
         </div>
         <!--**********************************
