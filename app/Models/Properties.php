@@ -13,6 +13,12 @@ class Properties extends Model
 
     public function flats()
     {
-        return $this->hasMany(Flats::class);
+        return $this->hasMany(Flats::class, 'property_id', 'id');
+    }
+
+    // local scope
+    public function scopeTakeLessThenFifty($query)
+    {
+        return $query->where('id', '<=', 50);
     }
 }
