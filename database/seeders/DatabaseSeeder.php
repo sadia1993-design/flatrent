@@ -15,10 +15,14 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        // \App\Models\Properties::factory(100)->create();
+        \App\Models\Properties::factory(100)->create();
+
+
         $this->call([
+            UserSeeder::class,
             // FlatSeeder::class,
             TenantsSeeder::class
+
         ]);
 
     }
