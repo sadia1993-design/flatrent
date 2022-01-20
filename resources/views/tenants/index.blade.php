@@ -38,7 +38,7 @@
                                 <hr style="border:1px solid #ccc;margin: 0 23px;">
 
 								<div class="card-body">
-									<table class="table table-striped table-condensed  table-hover " id="tenantList">
+									<table class="table table-striped table-bordered  table-hover " id="tenantList">
                                          <thead>
                                              <tr>
                                                  <th>Serial</th>
@@ -57,11 +57,11 @@
                                                  <td>{{$tenant->name}}</td>
                                                  <td>{{$tenant->email}}</td>
                                                  <td>{{$tenant->phone}}</td>
-                                                 <td>{{$tenant->address}}</td>
+                                                 <td>{{ Illuminate\Support\Str::limit($tenant->address, 30)}}</td>
                                                  <td>{{$tenant->nid}}</td>
                                                  <td>
-                                                     <a href="" class="btn btn-sm btn-primary">Edit</a>
-                                                     <a href="" class="btn btn-sm btn-danger">Delete</a>
+                                                     <a href="" class="btn btn-xs btn-primary"><i class="fas fa-edit"></i></a>
+                                                     <a href="" class="btn btn-xs btn-danger"><i class="fas fa-trash"></i></a>
                                                  </td>
                                              </tr>
                                              @empty
